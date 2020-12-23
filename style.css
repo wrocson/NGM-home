@@ -1,0 +1,195 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+/*  padding: 80px 100px;*/
+padding-bottom: 10px;
+  font-weight: bold;
+}
+span img{
+  padding-left: 10px;
+  
+
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+
+/*style of the image-slider*/
+.slider{
+  max-width: 630px;
+  border:10px solid  #29a8e2;
+  margin:50px auto 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .left-slide,.slider .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+   box-shadow: 0px 0px 10px black;
+   background-color: #29a8e2;
+}
+
+.slider .left-slide{
+  left: 5px;
+}
+.slider .right-slide{
+  right: 5px;
+}
+.slider .slider-items .item img{
+ /* max-width: 300%;*/
+  display: block;
+  width: 550px;
+  padding-left: 50px;
+}
+
+.slider .slider-items .item{
+  display: none;
+  position: relative;
+}
+.slider .slider-items .item .caption{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,.5);
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.slider .slider-items .item.active{
+  display: block;
+}
+/*section part*/
+section{
+  display: grid;
+  grid-gap:20px;     
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-rows:1fr;
+}
+.zone{
+    cursor:pointer;
+    text-align: center;
+    font-size:1em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+.one{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.one h2{
+  text-align: center;
+}
+.one p, .one li , .one h2{
+    color: #000000;
+}
